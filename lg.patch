@@ -1,0 +1,10 @@
+diff --git a/arch/arm/kernel/return_address.c b/arch/arm/kernel/return_address.c
+index df246da4..526e3c8f 100755
+--- a/arch/arm/kernel/return_address.c
++++ b/arch/arm/kernel/return_address.c
+@@ -68,4 +68,4 @@ void *return_address(unsigned int level)
+ 
+ #endif /* if defined(CONFIG_FRAME_POINTER) && !defined(CONFIG_ARM_UNWIND) / else */
+ 
+-EXPORT_SYMBOL_GPL(return_address);
++EXPORT_SYMBOL_GPL(is_module_address);

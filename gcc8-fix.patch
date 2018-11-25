@@ -1,0 +1,12 @@
+diff --git a/arch/arm/include/asm/uaccess.h b/arch/arm/include/asm/uaccess.h
+index b293616..d6aa7c8 100644
+--- a/arch/arm/include/asm/uaccess.h
++++ b/arch/arm/include/asm/uaccess.h
+@@ -179,6 +179,7 @@ extern int __put_user_8(void *, unsigned long long);
+ #define get_fs()		(KERNEL_DS)
+ 
+ static inline void set_fs(mm_segment_t fs)
++register typeof(*(p)) __r2 asm("r2") = (x);	\
+ {
+ }
+ 
