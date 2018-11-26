@@ -1,0 +1,23 @@
+# Reference: <https://postmarketos.org/devicepkg>
+pkgname="device-lg-ls670"
+pkgdesc="LG Optimus S"
+pkgver=0.1
+pkgrel=0
+url="https://postmarketos.org"
+license="MIT"
+arch="noarch"
+options="!check"
+depends="postmarketos-base linux-lg-ls670 mkbootimg mesa-dri-swrast"
+makedepends="devicepkg-dev"
+source="deviceinfo"
+
+build() {
+	devicepkg_build $startdir $pkgname
+}
+
+package() {
+	devicepkg_package $startdir $pkgname
+}
+
+
+sha512sums="6f5dcc4f0656599eba6561f1d3db9a3f743c7a9d349ad47509790937ec87f46a886fc58a1a206b6f83ec276941e4bca64b53f1dd1c3490c5faad8c7937f34f0f  deviceinfo"
